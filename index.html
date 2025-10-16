@@ -3,16 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bupora HQ</title>
+  <title>Bupora HQ — Digital Tools for Creators</title>
+  <meta name="description" content="Bupora HQ builds digital tools, creative assets, and design resources for modern creators.">
   <script src="https://cdn.tailwindcss.com"></script>
-  <meta name="description" content="Bupora HQ — digital tools and creative assets for modern creators.">
+  <style>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up {
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+  </style>
 </head>
-<body class="bg-neutral-950 text-neutral-100 flex flex-col items-center justify-center min-h-screen text-center p-6">
-  <div class="space-y-6">
-    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">👋 Welcome to <span class="text-white">Bupora HQ</span></h1>
-    <p class="text-neutral-400 max-w-xl mx-auto">
-      Creating digital tools and creative assets for modern creators.  
-      This is the lightweight mirror of our official website.
+
+<body class="bg-gradient-to-b from-neutral-950 via-neutral-900 to-[#1a1a1a] text-neutral-100 flex flex-col min-h-screen">
+  <!-- Hero -->
+  <section class="flex-1 flex flex-col items-center justify-center text-center p-8 space-y-6 fade-up">
+    <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+      <span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+        Bupora HQ
+      </span>
+    </h1>
+    <p class="text-neutral-400 max-w-xl text-lg leading-relaxed">
+      Building digital tools, creative assets, and minimalist designs for modern creators worldwide.
     </p>
 
     <div class="flex flex-col sm:flex-row gap-3 justify-center mt-6">
@@ -25,11 +39,22 @@
          GitHub ↗
       </a>
     </div>
+  </section>
 
-    <footer class="text-neutral-500 text-sm mt-10">
-      © <span id="year"></span> Bupora HQ · All rights reserved.
-    </footer>
-  </div>
+  <!-- About -->
+  <section class="px-6 md:px-12 py-16 text-center border-t border-neutral-800 fade-up">
+    <h2 class="text-2xl font-semibold mb-4">About Bupora HQ</h2>
+    <p class="text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+      Bupora HQ focuses on simplicity, functionality, and aesthetics —  
+      crafting experiences that empower independent creators, designers, and developers.  
+      Our ecosystem includes design templates, creative utilities, and digital resources.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-neutral-500 text-sm border-t border-neutral-800 fade-up">
+    © <span id="year"></span> Bupora HQ · Built with ❤️ using Tailwind CSS · <a href="https://bupora.com" class="underline hover:text-neutral-300">bupora.com</a>
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
