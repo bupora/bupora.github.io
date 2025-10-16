@@ -4,56 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bupora — Digital Tools for Creators</title>
-  <meta name="description" content="Bupora builds digital tools, creative assets, and design resources for modern creators." />
+  <meta name="description" content="Bupora builds digital tools, creative assets, and design systems for modern creators." />
   <link rel="icon" href="https://bupora.com/favicon.ico" />
+
+  <!-- ✅ Open Graph / SEO -->
+  <meta property="og:title" content="Bupora — Digital Tools for Creators" />
+  <meta property="og:description" content="Digital tools, design systems, and creative assets for modern creators." />
+  <meta property="og:image" content="https://bupora.com/og-cover.jpg" />
+  <meta property="og:url" content="https://bupora.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    /* Gradient animation */
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Fade-up animation */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    body {
+      background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #2a1a40, #43115e);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+    }
+
     .fade-up { animation: fadeUp 0.8s ease-out forwards; }
+
+    /* Glow text effect */
+    .glow {
+      text-shadow: 0 0 20px rgba(168, 85, 247, 0.6), 0 0 40px rgba(236, 72, 153, 0.4);
+    }
   </style>
 </head>
 
-<body class="bg-gradient-to-b from-neutral-950 via-neutral-900 to-[#1a1a1a] text-neutral-100 flex flex-col min-h-screen">
+<body class="text-neutral-100 flex flex-col min-h-screen">
 
-  <!-- Header / Logo -->
+  <!-- Header -->
   <header class="p-6 flex justify-center fade-up">
-    <a href="https://bupora.com" class="text-xl font-semibold tracking-tight text-white hover:text-neutral-300 transition">
-      <span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Bupora</span>
+    <a href="https://bupora.com" class="text-2xl font-semibold tracking-tight hover:text-neutral-300 transition">
+      <span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent glow">Bupora</span>
     </a>
   </header>
 
   <!-- Hero -->
   <section class="flex-1 flex flex-col items-center justify-center text-center p-8 space-y-6 fade-up">
-    <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
-      Build. Create. Inspire.
+    <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight glow">
+      Create Beyond Boundaries
     </h1>
-    <p class="text-neutral-400 max-w-xl text-lg leading-relaxed">
-      Bupora builds digital tools, creative assets, and design systems  
-      that empower modern creators worldwide.
+    <p class="text-neutral-300 max-w-xl text-lg leading-relaxed">
+      Building next-generation tools, creative assets, and digital experiences for modern creators.
     </p>
 
-    <div class="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+    <div class="flex flex-col sm:flex-row gap-3 justify-center mt-8">
       <a href="https://bupora.com"
-         class="px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-neutral-200 transition">
-         Visit bupora.com →
+         class="px-7 py-3 rounded-full bg-white text-black font-medium hover:bg-neutral-200 transition">
+         Explore bupora.com →
       </a>
       <a href="https://github.com/bupora"
-         class="px-6 py-3 rounded-full border border-neutral-700 hover:border-neutral-500 transition">
-         GitHub ↗
+         class="px-7 py-3 rounded-full border border-neutral-700 hover:border-neutral-500 transition">
+         View on GitHub ↗
       </a>
     </div>
   </section>
 
   <!-- About -->
   <section class="px-6 md:px-12 py-16 text-center border-t border-neutral-800 fade-up">
-    <h2 class="text-2xl font-semibold mb-4">About Bupora</h2>
-    <p class="text-neutral-400 max-w-2xl mx-auto leading-relaxed">
-      Bupora focuses on simplicity, functionality, and aesthetics —  
-      crafting experiences that empower independent creators, designers, and developers.  
-      Our ecosystem includes design templates, creative utilities, and digital resources.
+    <h2 class="text-3xl font-semibold mb-4">About Bupora</h2>
+    <p class="text-neutral-300 max-w-2xl mx-auto leading-relaxed">
+      Bupora focuses on merging design and technology to craft tools that amplify creativity.  
+      We believe in simplicity, precision, and purpose — creating digital products that help creators do more with less.
     </p>
   </section>
 
