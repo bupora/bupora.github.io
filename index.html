@@ -2,17 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bupora HQ</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 10%; }
-    h1 { font-size: 2.5em; }
-    a { color: #000; text-decoration: none; font-weight: 500; }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Bupora HQ — digital tools and creative assets for modern creators.">
 </head>
-<body>
-  <h1>👋 Welcome to Bupora HQ</h1>
-  <p>Creating digital tools & creative assets for modern creators.</p>
-  <p><a href="https://bupora.com">Visit bupora.com →</a></p>
+<body class="bg-neutral-950 text-neutral-100 flex flex-col items-center justify-center min-h-screen text-center p-6">
+  <div class="space-y-6">
+    <h1 class="text-4xl md:text-5xl font-semibold tracking-tight">👋 Welcome to <span class="text-white">Bupora HQ</span></h1>
+    <p class="text-neutral-400 max-w-xl mx-auto">
+      Creating digital tools and creative assets for modern creators.  
+      This is the lightweight mirror of our official website.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+      <a href="https://bupora.com" 
+         class="px-6 py-3 rounded-full bg-white text-black font-medium hover:bg-neutral-200 transition">
+         Visit bupora.com →
+      </a>
+      <a href="https://github.com/bupora" 
+         class="px-6 py-3 rounded-full border border-neutral-700 hover:border-neutral-500 transition">
+         GitHub ↗
+      </a>
+    </div>
+
+    <footer class="text-neutral-500 text-sm mt-10">
+      © <span id="year"></span> Bupora HQ · All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
