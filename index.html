@@ -7,7 +7,7 @@
   <meta name="description" content="Bupora builds digital tools, creative assets, and design systems for modern creators." />
   <link rel="icon" href="https://bupora.com/favicon.ico" />
 
-  <!-- ✅ Open Graph / SEO -->
+  <!-- Open Graph / SEO -->
   <meta property="og:title" content="Bupora — Digital Tools for Creators" />
   <meta property="og:description" content="Digital tools, design systems, and creative assets for modern creators." />
   <meta property="og:image" content="https://bupora.com/og-cover.jpg" />
@@ -16,31 +16,29 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Gradient animation */
     @keyframes gradientMove {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
-    /* Fade-up animation */
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     body {
-      background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #2a1a40, #43115e);
+      background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #43115e);
       background-size: 400% 400%;
-      animation: gradientMove 15s ease infinite;
+      animation: gradientMove 18s ease infinite;
     }
 
-    .fade-up { animation: fadeUp 0.8s ease-out forwards; }
-
-    /* Glow text effect */
-    .glow {
-      text-shadow: 0 0 20px rgba(168, 85, 247, 0.6), 0 0 40px rgba(236, 72, 153, 0.4);
-    }
+    .fade-up { animation: fadeUp 1s ease-out forwards; }
+    .float { animation: float 6s ease-in-out infinite; }
   </style>
 </head>
 
@@ -48,18 +46,31 @@
 
   <!-- Header -->
   <header class="p-6 flex justify-center fade-up">
-    <a href="https://bupora.com" class="text-2xl font-semibold tracking-tight hover:text-neutral-300 transition">
-      <span class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent glow">Bupora</span>
-    </a>
+    <div class="flex items-center space-x-3">
+      <!-- Abstract Mark -->
+      <svg class="w-8 h-8 float" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" fill="url(#grad)" opacity="0.9"/>
+        <defs>
+          <radialGradient id="grad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#a855f7"/>
+            <stop offset="70%" stop-color="#ec4899"/>
+            <stop offset="100%" stop-color="transparent"/>
+          </radialGradient>
+        </defs>
+      </svg>
+      <a href="https://bupora.com" class="text-2xl font-semibold tracking-tight hover:text-neutral-300 transition">
+        Bupora
+      </a>
+    </div>
   </header>
 
   <!-- Hero -->
   <section class="flex-1 flex flex-col items-center justify-center text-center p-8 space-y-6 fade-up">
-    <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight glow">
-      Create Beyond Boundaries
+    <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
+      Digital Tools for the Creative Future
     </h1>
     <p class="text-neutral-300 max-w-xl text-lg leading-relaxed">
-      Building next-generation tools, creative assets, and digital experiences for modern creators.
+      Merging design and technology to build tools that empower creators, designers, and developers worldwide.
     </p>
 
     <div class="flex flex-col sm:flex-row gap-3 justify-center mt-8">
@@ -69,7 +80,7 @@
       </a>
       <a href="https://github.com/bupora"
          class="px-7 py-3 rounded-full border border-neutral-700 hover:border-neutral-500 transition">
-         View on GitHub ↗
+         GitHub ↗
       </a>
     </div>
   </section>
@@ -78,8 +89,8 @@
   <section class="px-6 md:px-12 py-16 text-center border-t border-neutral-800 fade-up">
     <h2 class="text-3xl font-semibold mb-4">About Bupora</h2>
     <p class="text-neutral-300 max-w-2xl mx-auto leading-relaxed">
-      Bupora focuses on merging design and technology to craft tools that amplify creativity.  
-      We believe in simplicity, precision, and purpose — creating digital products that help creators do more with less.
+      Bupora is a digital creation lab focused on blending art, code, and design systems.  
+      From minimal UI assets to smart creative tools, Bupora builds for makers — simple, powerful, and inspiring.
     </p>
   </section>
 
